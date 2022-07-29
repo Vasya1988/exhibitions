@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    margin: auto;
+    width: 100%;
+    max-width: 1024px;
+    /* height: 100em; */
+    background-size: cover;
+}
+.background {
+    width: 100%;
+}
+.logo {
+    width: 100%;
+    max-width: 420px;
+    min-width: 200px;
+    padding: 0 0 0 22px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: rgb(156, 156, 156); */
+}
+.description-1 {
+    width: 100%;
+    max-width: 556px;
+    display: flex;
+    background-color: #5FBC56;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    box-sizing: border-box;
+    font-size: larger;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #323232;
+}
+.description-2 {
+    padding: 10px 32px 56px 18px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 820px;
+    display: block;
+    background-color: #FFDD15;
+    color: #323232;
+    font-size: larger;
+    font-family: 'Montserrat', sans-serif;
+}
+.banners-frame {
+    margin-top: -40px;
+    display: flex;
+    justify-content: flex-end;
+}
+.banners {
+    padding: 60px;
+    width: 100%;
+    max-width: 600px;
+    background-color: #1DB9DB;
+    font-size: x-large;
+    font-family: 'Montserrat', sans-serif;
+}
+.poster {
+    /* padding: 10px 0 18px 10px; */
+    box-sizing: border-box;
+    color: #fff;
+    font-size: xx-large;
+    font-weight: 600;
+    letter-spacing: .05em;
+}
+.photo-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card {
+    margin-bottom: -4px;
+    max-width: 33.3%;
+    /* height: 510px; */
+    overflow: hidden;
+    position: relative;
+}
+.card:hover {
+
+}
+.text span {
+    /* display: none; */
+
+    padding: 16px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+.card:hover span {
+    display: block;
+}
+.card:hover .picture > img {
+    opacity: 0.15;
+}
+.card:hover .text {
+    opacity: 1;
+    color: #565656;
+}
+.picture img {
+    transition: .3s;
+    width: 100%;
+}
+.footer {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+.pixel-print {
+    width: 100%;
+    max-width: 446px;
+}
+.bag {
+    width: 100%;
+    max-width: 330px;
+}
+.picture {
+
+}
+.text {
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+.icon {
+    padding: 6px 0 0 8px;
+    width: 100%;
+    max-width: 140px;
+}
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 76%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .description-1 {
+        padding: 40px 20px;
+        font-weight: 600;
+    }
+    .description-2 {
+        padding: 10px 46px 50px 18px;
+        font-size: medium;
+        text-align: center;
+    }
+    .poster {
+        letter-spacing: .03em;
+    }
+    .banners {
+        max-width: 100%;
+        padding: 30px 60px;
+    }
+    .icon {
+        max-width: 82px;
+    }
+    .text {
+        padding-top: 10px;
+    }
+    .text span {
+        font-weight: 100;
+    }
+    .bag {
+        max-width: 230px;
+        padding-right: 10px;
+    }
+    .pixel-print {
+        width: 290px;
+        padding-left: 10px;
+    }
+}
+@media screen and (max-width: 626px) {
+    .header {
+        flex-wrap: wrap;
+    }
+    .logo {
+        margin: 0 auto;
+    }
+    .description-1 {
+        padding: 0 10px 20px 10px;
+        min-width: 100%;
+        text-align: center;
+        background-color: #fff;
+        color: #1DB9DB;
+    }
+    .description-2 {
+        background-color: #fff;
+        padding: 0 50px 56px 50px;
+    }
+    .poster {
+        font-size: x-large;
+    }
+    .card {
+        min-width: 50%;
+    }
+}
+@media screen and (max-width: 560px) {
+    .footer {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+    .bag {
+        max-width: 160px;
+    }
+    .pixel-print {
+        max-width: 210px;
+    }
+}
+@media screen and (max-width: 410px) {
+    .description-1 {
+        font-size: medium;
+    }
+    .description-2 {
+        padding: 0 16px 56px 16px;
+    }
+    .banners {
+        padding: 24px 26px;
+    }
+    .poster {
+        font-size: large;
+    }
+    .icon {
+        display: none;
+        max-width: 60px;
+    }
+    .text span {
+        padding: 0;
+
+    }
+    .bag {
+        max-width: 120px;
+    }
+    .pixel-print {
+        max-width: 150px;
+    }
+}
