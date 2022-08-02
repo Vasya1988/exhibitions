@@ -93,8 +93,6 @@
 
 }
 .text span {
-    /* display: none; */
-
     padding: 16px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -136,7 +134,7 @@
 .picture {
 
 }
-.text {
+.cardToggle .text, .text {
     padding-top: 30px;
     display: flex;
     flex-wrap: wrap;

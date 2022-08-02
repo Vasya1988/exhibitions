@@ -85,7 +85,7 @@ elements.card.forEach((event) => {
     event.addEventListener('click', (card) => {
         card.stopPropagation()
         console.log(event);
-        event.classList.toggle('.cardToggle')
+        event.classList.toggle('cardToggle')
     })
 })
 
