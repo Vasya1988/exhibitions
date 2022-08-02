@@ -82,11 +82,21 @@ elements.arrows.forEach((arrow) => {
 
 // События фото-карточек
 elements.card.forEach((event) => {
-    event.addEventListener('click', (card) => {
+    event.addEventListener('touchEvent', (card) => {
         card.stopPropagation()
         console.log(event);
         event.classList.toggle('cardToggle')
+    });
+
+    event.addEventListener('mouseover', (card) => {
+        card.stopPropagation()
+        console.log(event);
+        event.classList.add('cardToggle')
+    });
+
+    event.addEventListener('mouseout', (card) => {
+        card.stopPropagation()
+        console.log(event);
+        event.classList.remove('cardToggle')
     })
 })
-
-
