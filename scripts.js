@@ -10,11 +10,13 @@ const elements = {
     arrows: document.querySelectorAll('[data-arrow]'),
     arrowLeft: document.querySelector('[data-arrow="left"]'),
     arrowRight: document.querySelector('[data-arrow="right"]'),
-    poster: document.querySelector('[data-poster]')
+    poster: document.querySelector('[data-poster]'),
+    card: document.querySelectorAll('.card')
 }
 elements.poster.innerHTML = posters[posterFlag];
 console.log('start --> ', posterFlag)
 
+// Смена даты выставки
 const changeInfo = (arrow) => {
     arrow = arrow || 2
     if (arrow === 'left') {
@@ -42,7 +44,6 @@ const changeInfo = (arrow) => {
         }
     }
     else {
-        console.log(posterFlag);
         posterFlag = posterFlag - 1;
         setTimeout(() => {
             elements.poster.style.opacity = '0'
@@ -59,16 +60,16 @@ const changeInfo = (arrow) => {
     }
     
 }
-
+// Автоматическая смена даты выставки
 const autoChange = () => {
     setTimeout(() => {
-        console.log('autoChange is working');
         changeInfo();
         autoChange(posterFlag);
     }, 4000)
 }
 autoChange()
 
+// События стрелок вперед/назад
 elements.arrows.forEach((arrow) => {
     arrow.addEventListener('click', () => {
         elements.poster.style.opacity = 0;
@@ -78,4 +79,14 @@ elements.arrows.forEach((arrow) => {
         }, 200)
     })
 })
+
+// События фото-карточек
+elements.card.forEach((event) => {
+    event.addEventListener('click', (card) => {
+        card.stopPropagation()
+        console.log(event);
+        event.classList.toggle('.cardToggle')
+    })
+})
+
 
