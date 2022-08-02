@@ -102,11 +102,13 @@
 }
 .card:hover span {
     display: block;
+    cursor: pointer;
 }
 .card:hover .picture > img {
     opacity: 0.15;
 }
 .card:hover .text {
+    cursor: pointer;
     opacity: 1;
     color: #565656;
 }
